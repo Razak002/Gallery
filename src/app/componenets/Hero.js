@@ -23,13 +23,12 @@ const Hero = ({ data }) => {
 
       </div>
 
-      <div>
+      <div className=''>
         <Image
           src={data?.heroImage?.url}
           alt='hero image'
           width={600}
-          height={300}
-          className='bg-green-800 '
+          height={500}
         />
 
       </div>
