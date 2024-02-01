@@ -1,17 +1,22 @@
 "use client"
 import { useState, useEffect } from "react";
-import { heroSection } from "./services";
+import { Blogs, heroSection, offerList } from "./services";
 import Navbar from "./componenets/Navbar";
 import Hero from './componenets/Hero'
-import Blog from './componenets/Blog'
 import Cta from './componenets/Cta'
 import Questions from './componenets/Questions'
 import Footer from './componenets/Footer'
 import Services from "./componenets/Services";
+import BlogCard from "./componenets/BlogCard";
 
 
 export default function Home() {
   const [data, setData] = useState()
+  const [offer, setOffer] = useState()
+  const [blog , setBlog] = useState()
+
+  console.log(data)
+
 
   useEffect(() => {
     getHeroData();
@@ -19,6 +24,11 @@ export default function Home() {
 
   const getHeroData = async () => {
     const res = await heroSection();
+    const offerRes = await offerList();
+    const blogres = await Blogs ();
+
+    setBlog(blogres)
+    setOffer(offerRes)
     setData(res);
     return;
   }
@@ -27,8 +37,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero data={data?.heroes[0]} />
-      <Services />
-      <Blog />
+      <Services data={offer} />
+      <BlogCard data={blog} />
       <Cta />
       <Questions />
       <Footer />

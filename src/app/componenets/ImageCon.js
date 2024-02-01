@@ -22,6 +22,6 @@ port
 
 
 
-}
+};
 
 export default images
