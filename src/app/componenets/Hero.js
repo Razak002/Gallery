@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Hero = ({ data }) => {
   return (
-    <div className='max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row justify-between items-center  '>
+    <div className='max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row justify-between items-center'>
       <div className='p-4 gap-4 md:flex justify-between'>
         <div className='space-y-4'>
           <h1 className='text-2xl font-bold'>
@@ -25,7 +25,7 @@ const Hero = ({ data }) => {
         </div>
 
 
-        <div className='w-[100%]'>
+        <div className=''>
           <Image
             src={data?.heroImage?.url}
             alt='hero image'
