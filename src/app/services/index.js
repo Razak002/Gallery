@@ -34,6 +34,10 @@ export const queryHomePage = async () => {
         ctaText
         head
       }
+      questions {
+        questAns
+        questText
+      }
     }
  `
   const response = await graphQLclient.request(query);

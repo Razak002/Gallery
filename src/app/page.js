@@ -29,8 +29,8 @@ export default function Home() {
       <Hero data={data?.heroes[0]} />
       <Services data={data?.offers} />
       <BlogCard data={data?.blogs} />
-      <Cta data={data?.ctas }/>
-      <Questions />
+      <Cta data={data?.ctas[0]} />
+      <Questions data={data?.questions} />
       <Footer />
     </main>
   );
