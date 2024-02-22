@@ -12,7 +12,7 @@ const Questions = ({data}) => {
 
           {data?.map((questions) => {
             return (
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-4 p-4">
                 <div className="h-32 rounded-lg bg-gray-100 p-4 ">
 
                   <div className='flex gap-2 font-semibold mb-3'>

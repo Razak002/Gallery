@@ -5,7 +5,7 @@ import images from "./ImageCon";
 export default function Navbar() {
   return (
     <>
-      <header className="bg-white">
+      <header className="bg-white cursor-pointer">
         <div className="mx-auto flex h-16 max-w-screen-xl items-center">
           <div className="mt-7" href="/">
             <Image src={images.gallery} alt='' />
@@ -26,23 +26,9 @@ export default function Navbar() {
                 </ul>
               </nav>
 
-              <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
-                <span className="sr-only">Toggle menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
+            <div className="block md:hidden mt-7">
+              <Image src={images.coms} alt="" width={60} height={60} />
+            </div>
             </div>
           </div>
         </div>

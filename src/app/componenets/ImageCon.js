@@ -6,6 +6,7 @@ import wed from '../assets/wed.png'
 import prod from '../assets/prod.png'
 import port from '../assets/port.png'
 import adv from '../assets/adv.png'
+import coms from '../assets/coms.png'
 
 
 const images = {
@@ -16,7 +17,8 @@ mancam,
 wed,
 prod,
 adv,
-port
+port,
+coms
 
 
 

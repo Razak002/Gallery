@@ -7,7 +7,8 @@ import Cta from './componenets/Cta'
 import Questions from './componenets/Questions'
 import Footer from './componenets/Footer'
 import Services from "./componenets/Services";
-import BlogCard from "./componenets/BlogCard";
+import Blog from "./componenets/Blog";
+
 
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
       <Navbar />
       <Hero data={data?.heroes[0]} />
       <Services data={data?.offers} />
-      <BlogCard data={data?.blogs} />
+      <Blog data={data?.blogs} />
       <Cta data={data?.ctas[0]} />
       <Questions data={data?.questions} />
       <Footer />
