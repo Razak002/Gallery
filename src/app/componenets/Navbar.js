@@ -27,7 +27,7 @@ export default function Navbar() {
               </nav>
 
             <div className="block md:hidden mt-7">
-              <Image src={images.coms} alt="" width={60} height={60} />
+              <Image src={images.coms} alt="image" width={60} height={60} />
             </div>
             </div>
           </div>

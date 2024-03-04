@@ -1,9 +1,9 @@
 "use client"
 
-import { getSingleBlog } from "@/app/services/index";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { getSingleBlog } from "@/app/services";
 
 export default function BlogDetails({ params }) {
     const [blogDetails, setBlogDetails] = useState(null)
@@ -13,10 +13,12 @@ export default function BlogDetails({ params }) {
         setBlogDetails(blogDetails)
         return;
     }
+    // console.log(blogDetails)
 
     useEffect(() => {
         getBlogDetails()
-    }, [])
+    })
+    // console.log(blogDetails)
 
     return (
         <>
@@ -38,16 +40,16 @@ export default function BlogDetails({ params }) {
                             </Link>
                         </div>
                         <h1 className="text-left block my-4 text-3xl font-bold">
-                            {blogDetails?.blogs.blogtitle}
-                            <h2>heloo world</h2>
+                            {blogDetails?.blog.blogtitle}
+                           
                         </h1>
                         <p className="mb-4 text-lg  text-gray-500">
-                            {blogDetails?.blogs.blogdescription}
+                            {blogDetails?.blog.blogdescription}
                         </p>
                         
                         <Image
                             alt="Office"
-                            src={blogDetails?.blogs?.blogImage?.url}
+                            src={blogDetails?.blog?.blogImage?.url}
                             width="400"
                             height="400"
                             className="w-full object-cover"
@@ -55,7 +57,7 @@ export default function BlogDetails({ params }) {
                         <br />
                         <div
                             dangerouslySetInnerHTML={{
-                                __html: `${blogDetails?.blogs?.completeDesc?.html}`,
+                                __html: `${blogDetails?.blog?.completeDesc.html}`,
                             }}
                         />
                     </div>

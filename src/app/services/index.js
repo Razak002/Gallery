@@ -49,12 +49,12 @@ export const queryHomePage = async () => {
 
 }
 
-export const getSingleBlog = async (slug) =>{
+export const getSingleBlog = async (slug) => {
   const query = gql`
-  query getSingleBlog($slug: String!) {
-    blogs(where: {slug: $slug}) {
-      blogdescription
+  query getSingleBlog($slug: String) {
+    blog(where: {slug: $slug}) {
       blogtitle
+      blogdescription
       blogImage {
         url
       }
@@ -64,10 +64,11 @@ export const getSingleBlog = async (slug) =>{
     }
   }
   
+  
   `
   const slugName = {
-  slug,
-  
+    slug,
+
   }
 
   const response = await graphQLclient.request(query, slugName)

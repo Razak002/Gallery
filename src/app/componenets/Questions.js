@@ -10,9 +10,9 @@ const Questions = ({data}) => {
             Frequent questions
           </h2>
 
-          {data?.map((questions) => {
+          {data?.map((questions, index) => {
             return (
-              <div className="grid grid-cols-1 gap-4 p-4">
+              <div key={index} className="grid grid-cols-1 gap-4 p-4">
                 <div className="h-32 rounded-lg bg-gray-100 p-4 ">
 
                   <div className='flex gap-2 font-semibold mb-3'>

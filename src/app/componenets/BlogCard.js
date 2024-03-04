@@ -57,6 +57,7 @@ export default function BlogCard({
     <>
       <article className='overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm'>
         <Image
+        alt='image'
           src={image}
           width={300}
           height={300}
