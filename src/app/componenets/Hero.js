@@ -31,6 +31,7 @@ const Hero = ({ data }) => {
             alt='hero image'
             width={600}
             height={500}
+            className='rounded-xl'
           />
 
         </div>

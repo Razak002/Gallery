@@ -12,7 +12,7 @@ const Services = ({ data }) => {
           <div className='grid grid-cols-1 md:grid-cols-4 justify-evenly gap-4 px-4'>
             {data?.map((offer) => {
               return (
-                <div className='bg-gray-400 p-4' key={data.index} >
+                <div className='bg-gray-400 p-4 rounded-md' key={data.index} >
                   <div className='flex flex-col justify-center items-center p-6'>
                     <Image src={offer?.offerIcon?.url} alt='' width={50} height={50}/>
                     <span className='text-sm font-semibold'>{offer?.offerTitle}</span>

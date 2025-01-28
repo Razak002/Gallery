@@ -63,8 +63,6 @@ export const getSingleBlog = async (slug) => {
       }
     }
   }
-  
-  
   `
   const slugName = {
     slug,
