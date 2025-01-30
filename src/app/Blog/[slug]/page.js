@@ -24,7 +24,7 @@ export default function BlogDetails({ params }) {
         <>
             <div className="min-h-screen">
                 {blogDetails && (
-                    <div className="max-w-[800px] mx-auto py-10">
+                    <div className="max-w-[800px] mx-auto py-10 px-5 md:px-0">
                         <div className="pb-4">
                             <Link
                                 href={`/`}
